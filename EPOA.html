@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enduring Power of Attorney Questionnaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 30px;
+      background-color: #007849;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005c36;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Enduring Power of Attorney Questionnaire</h1>
+    
+    <form action="#" method="POST">
+      <label for="fullName">Your Full Legal Name</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="attorney">Name of Attorney (person you appoint)</label>
+      <input type="text" id="attorney" name="attorney" required />
+
+      <label for="attorneyRelation">Relationship to You</label>
+      <input type="text" id="attorneyRelation" name="attorneyRelation" required />
+
+      <label for="powers">Specific Powers Granted (optional)</label>
+      <textarea id="powers" name="powers" rows="3" placeholder="e.g., manage property, bank accounts, legal matters"></textarea>
+
+      <label for="restrictions">Restrictions or Conditions (optional)</label>
+      <textarea id="restrictions" name="restrictions" rows="3" placeholder="e.g., power activates only upon incapacity"></textarea>
+
+      <label for="email">Your Email (to receive completed EPOA)</label>
+      <input type="email" id="email" name="email" required />
+
+      <button type="submit">Submit EPOA Questionnaire</button>
+    </form>
+  </div>
+
+</body>
+</html>

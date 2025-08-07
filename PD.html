@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Directive Questionnaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #004085;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .tooltip {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+      margin-left: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #888;
+      vertical-align: middle;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Directive Questionnaire</h1>
+
+    <form id="pd-form">
+      <div class="question">
+        <label for="fullName">What is Your Full Legal Name?</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Type your FULL legal name as it appears on your Birth Certificate or other government ID. Include all middle names (if any). Do not use nicknames." />
+      </div>
+
+      <div class="question">
+        <label for="dob">What is Your Date of Birth?</label>
+        <input
+          type="text"
+          id="dob"
+          name="dob"
+          placeholder="YYYY-MM-DD (or type it manually if preferred)"
+          onfocus="(this.type='date')" />
+      </div>
+
+      <div class="question">
+        <label for="address">What is Your Full Residential Address?</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Full street address, city, province, and postal code." />
+      </div>
+
+      <div class="question">
+        <label for="email">What is Your Email Address (So We Can Send You a Copy)?
+          <span class="tooltip" title="We'll email you a PDF copy of your completed Personal Directive with signing instructions.">?</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com" />
+      </div>
+
+      <div class="question">
+        <label for="agentName">Who Do You Want to Be Your Health Care Agent (Decision Maker)?</label>
+        <input
+          type="text"
+          id="agentName"
+          name="agentName"
+          placeholder="Full name of the person who will make health decisions if you're incapacitated." />
+      </div>
+
+      <div class="question">
+        <label for="agentRelation">What is Your Relationship to this Agent?</label>
+        <input
+          type="text"
+          id="agentRelation"
+          name="agentRelation"
+          placeholder="My Wife, My Son, My Best Friend, etc." />
+      </div>
+
+      <div class="question">
+        <label for="alternateAgent">Do You Want to Name an Alternate Health Care Agent?</label>
+        <input
+          type="text"
+          id="alternateAgent"
+          name="alternateAgent"
+          placeholder="Name and relationship of your backup health care decision maker." />
+      </div>
+
+      <div class="question">
+        <label for="careWishes">What Are Your Wishes About Medical or Personal Care?</label>
+        <textarea
+          id="careWishes"
+          name="careWishes"
+          rows="4"
+          placeholder="Example: I do not want to be kept alive on life support if there is no hope of recovery..."></textarea>
+      </div>
+
+      <div class="question">
+        <label for="otherInstructions">Other Instructions, Preferences, or Notes?</label>
+        <textarea
+          id="otherInstructions"
+          name="otherInstructions"
+          rows="3"
+          placeholder="Any other instructions you'd like to include? This section is optional."></textarea>
+      </div>
+
+      <div class="button-row">
+        <button type="button" onclick="history.back()">← Back</button>
+        <button type="submit">Submit →</button>
+      </div>
+    </form>
+
+    <div class="footer">
+      Disclaimer: MyLegalDocs is not a law firm and does not provide legal advice. Use of this site is subject to our Terms of Service and Privacy Policy.
+    </div>
+  </div>
+</body>
+</html>

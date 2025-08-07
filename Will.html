@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will Questionnaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #004085;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .tooltip {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+      margin-left: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #888;
+      vertical-align: middle;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TELL US:</h1>
+
+    <form id="will-form">
+      <div class="question">
+        <label for="fullName">What is Your FULL LEGAL Name?</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Type your FULL legal name as it appears on your Birth Certificate or other government ID. Include all of your middle names (if any). Do not use nicknames." />
+      </div>
+
+      <div class="question">
+        <label for="dob">When were You Born?</label>
+        <input
+          type="text"
+          id="dob"
+          name="dob"
+          placeholder="YYYY-MM-DD (or type it manually if preferred)"
+          onfocus="(this.type='date')" />
+      </div>
+
+      <div class="question">
+        <label for="address">What is Your Full Residential Address?</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Type your FULL street address, city, province OR state, and postal OR zip code." />
+      </div>
+
+      <div class="question">
+        <label for="email">What is Your Email Address to Send Your Will to?
+          <span class="tooltip" title="We'll email you a PDF copy of your completed Will with signing instructions.">?</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com" />
+      </div>
+
+      <div class="button-row">
+        <button type="button" onclick="history.back()">← Back</button>
+        <button type="submit">Submit →</button>
+      </div>
+    </form>
+
+    <div class="footer">
+      Disclaimer: Alberta Legal Wills is not a law firm and does not, can not, and will not provide legal advice. Use of this site is subject to our Terms of Service and Privacy Policy.
+    </div>
+  </div>
+</body>
+</html>

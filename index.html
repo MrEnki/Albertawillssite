@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alberta Legal Wills</title>
+  <style>
+    /* Reset & Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.5; color: #333; }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky; top: 0; z-index: 10;
+    }
+    header h1 { color: #004085; font-size: 1.5rem; }
+    nav a {
+      margin-left: 1rem;
+      color: #004085;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero Banner */
+    .hero-banner { position: relative; overflow: hidden; }
+    .hero-banner img {
+      width: 100%;
+      height: auto;               /* show full image */
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-banner .overlay {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    }
+    .hero-text {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff; text-align: center;
+      padding: 0 1rem;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem; margin-bottom: 0.5rem;
+    }
+    .hero-text p {
+      font-size: 1.125rem; margin-bottom: 1rem;
+    }
+    .hero-text .btn-primary {
+      background: #004085; color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none; border-radius: 0.25rem;
+      font-weight: bold; text-decoration: none;
+      cursor: pointer;
+    }
+    .hero-text .btn-primary:hover { background: #003366; }
+
+    /* Services */
+    #services {
+      padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;
+      text-align: center;
+    }
+    #services h2 { color: #004085; margin-bottom: 2rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #fff; border: 1px solid #ddd;
+      border-radius: 0.5rem; padding: 2rem 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card-icon {
+      width: 96px; height: 96px;
+      margin-bottom: 1.5rem;
+      filter: brightness(1.2) saturate(1.5);
+    }
+    .card h3 { color: #004085; margin-bottom: 0.5rem; }
+    .card p { margin-bottom: 1rem; }
+
+    /* How It Works */
+    #how-it-works {
+      background: #f1f5f9; padding: 4rem 2rem; text-align: center;
+    }
+    #how-it-works h2 { color: #004085; margin-bottom: 1rem; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 2rem; max-width: 1000px; margin: 0 auto;
+    }
+    .step { background: #fff; border: 1px solid #ddd;
+      border-radius: 0.5rem; padding: 1.5rem;
+    }
+    .step h4 { color: #004085; margin-bottom: 0.5rem; }
+    .step p { font-size: 0.95rem; }
+
+    /* Pricing */
+    #pricing {
+      padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; text-align: center;
+    }
+    #pricing h2 { color: #004085; margin-bottom: 1rem; }
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 2rem;
+    }
+    .tier {
+      background: #fff; border: 1px solid #ddd;
+      border-radius: 0.5rem; padding: 2rem 1rem;
+    }
+    .tier h4 { margin-bottom: 0.5rem; color: #004085; }
+    .tier p { margin-bottom: 1rem; }
+    .tier .btn-primary {
+      background: #004085; color: #fff;
+      padding: 0.75rem 1.5rem; border-radius: 0.25rem;
+      font-weight: bold; text-decoration: none;
+    }
+    .tier .btn-primary:hover { background: #003366; }
+
+    /* Footer */
+    footer {
+      background: #fff; padding: 2rem; text-align: center;
+      font-size: 0.875rem; color: #666; border-top: 1px solid #ddd;
+    }
+    footer a {
+      color: #004085; margin: 0 0.5rem; text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* Override: hide hero button & show full image */
+    .hero-text .btn-primary {
+      display: none !important;
+    }
+    .hero-banner img {
+      height: auto !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ALBERTA LEGAL WILLS</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Will.html">Will</a>
+      <a href="EPOA.html">EPOA</a>
+      <a href="PD.html">PD</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner">
+    <img src="assets/images/hero.jpg" alt="Happy Alberta family at backyard BBQ">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Fast, Simple & Affordable Estate Planning</h2>
+      <p>Create your Will, Power of Attorney & Personal Directive online—valid in Alberta.</p>
+      <a class="btn-primary" href="#services">Get Started</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Alberta-Law Compliant Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <img src="assets/icons/will-icon.svg" alt="Will icon" class="card-icon">
+        <h3>Last Will & Testament</h3>
+        <p>Document your final wishes, appoint guardians and distribute assets.</p>
+        <a class="btn-primary" href="Will.html">Start Your Will</a>
+      </div>
+      <div class="card">
+        <img src="assets/icons/epoa-icon.svg" alt="EPOA icon" class="card-icon">
+        <h3>Enduring Power of Attorney</h3>
+        <p>Authorize a trusted person to manage your finances if you can’t.</p>
+        <a class="btn-primary" href="EPOA.html">Start EPOA</a>
+      </div>
+      <div class="card">
+        <img src="assets/icons/pd-icon.svg" alt="PD icon" class="card-icon">
+        <h3>Personal Directive</h3>
+        <p>Specify your health and personal care wishes in advance.</p>
+        <a class="btn-primary" href="PD.html">Start PD</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h4>1. Fill Out the Form</h4>
+        <p>Answer clear, guided questions at your own pace.</p>
+      </div>
+      <div class="step">
+        <h4>2. Review & Download</h4>
+        <p>Instantly download your completed PDF with instructions.</p>
+      </div>
+      <div class="step">
+        <h4>3. Sign & Store</h4>
+        <p>Print, sign with two witnesses, and keep your documents safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h4>Will Only</h4>
+        <p><strong>$49.95</strong></p>
+        <a class="btn-primary" href="Will.html">Buy Will</a>
+      </div>
+      <div class="tier">
+        <h4>Complete Package</h4>
+        <p><strong>$99.95</strong></p>
+        <a class="btn-primary" href="Will.html">Buy Bundle</a>
+      </div>
+    </div>
+    <p style="margin-top:1rem; font-size:0.9rem;">30-Day Money-Back Guarantee</p>
+  </section>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="contact.html">Contact</a>
+    <p style="margin-top:1rem;">Disclaimer: Alberta Legal Wills is not a law firm and does not provide legal advice. We recommend independent review of all documents.</p>
+    <p>© 2025 Alberta Legal Wills</p>
+  </footer>
+
+</body>
+</html>
